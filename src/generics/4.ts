@@ -5,23 +5,9 @@ type User = {
   password: string;
 };
 
-const userInfo: User = {
-  name: "Kateryna",
-  surname: "Kononova",
-  email: "kononova@gmail.com",
-  password: "1234",
-};
+function createOrUpdateUser(initialValues: Partial<User>) {}
 
-function createOrUpdateUser(initialValues: User, updateUser: Partial<User>) {
-  return {
-    ...initialValues,
-    ...updateUser,
-  };
-}
-
-console.log(
-  createOrUpdateUser(userInfo, {
-    email: "user@mail.com",
-    password: "password123",
-  })
-);
+createOrUpdateUser({
+  email: "user@mail.com",
+  password: "password123",
+});
